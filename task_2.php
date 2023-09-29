@@ -1,12 +1,23 @@
 <?php
-function Odd ($numbers) {
-    if ($numbers % 2 !== 0) {
-        return TRUE;
-    } else {
-        return FALSE;
-    }
-};
+$numbers = range(1, 10);
 
-$numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-print_r(array_filter($numbers, "Odd"));
+function remove_even($array) {
+  // Define the callback function
+  function is_odd($num) {
+    // Check if the number is odd by using the modulo operator
+    return $num % 2 != 0;
+  }
+  // Filter the array using the callback function
+  return array_filter($array, "is_odd");
+}
+
+function remove_even($array) {
+  // Define the callback function
+  function is_odd($num) {
+    // Check if the number is odd by using the modulo operator
+    return $num % 2 != 0;
+  }
+  // Filter the array using the callback function
+  return array_filter($array, "is_odd");
+}
 ?>
